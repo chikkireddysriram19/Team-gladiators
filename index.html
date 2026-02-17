@@ -1,0 +1,63 @@
+ <!DOCTYPE html>
+<html>
+<head>
+  <title>AI Assistant Director</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="navbar">
+  🎬 AI Assistant Director Studio
+</div>
+
+<div class="main">
+
+  <!-- LEFT PANEL -->
+  <div class="panel">
+
+    <!-- STORY -->
+    <h3>Story</h3>
+    <textarea id="story" placeholder="Write your story..."></textarea>
+
+    <!-- CHARACTERS -->
+    <div class="section-header">
+      <h3>Characters</h3>
+      <button class="add-btn" onclick="showCharacterInput()">+ Add Character</button>
+    </div>
+
+    <div id="characterInputContainer" class="hidden input-inline">
+      <input type="text" id="newCharacterName" placeholder="Enter character name">
+      <button class="save-btn" onclick="addCharacter()">Add</button>
+    </div>
+
+    <ul id="charactersList" class="list"></ul>
+
+    <!-- LOCATIONS -->
+    <div class="section-header">
+      <h3>Locations</h3>
+      <button class="add-btn" onclick="showLocationInput()">+ Add Location</button>
+    </div>
+
+    <div id="locationInputContainer" class="hidden input-inline">
+      <input type="text" id="newLocationName" placeholder="Enter location name">
+      <button class="save-btn" onclick="addLocation()">Add</button>
+    </div>
+
+    <ul id="locationsList" class="list"></ul>
+
+    <button class="generate-btn" onclick="generate()">Generate Pre Production</button>
+
+  </div>
+
+  <!-- RIGHT PANEL -->
+  <div class="panel output-panel">
+    <h3>Pre Production Output</h3>
+    <div id="loading" class="hidden">AI is Thinking...</div>
+    <div id="output"></div>
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
